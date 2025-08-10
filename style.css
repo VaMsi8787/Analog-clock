@@ -1,0 +1,139 @@
+body {
+    background-color: #0f172a;
+    color: #1e293b;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.digital-time {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #00ffaa;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.clock {
+    width: 80vmin;
+    height: 80vmin;
+    max-width: 400px;
+    max-height: 400px;
+    min-height: 250px;
+    min-width: 250px;
+    border: 0.5vmin solid #0ff;
+    border-radius: 50%;
+    position: relative;
+    background-color: #1e293b;
+    box-shadow: 0 0 2vmin #0ff;
+}
+
+.hand {
+    position: absolute;
+    /* width: 50%; */
+    height: 1.2vmin;
+    font-size: 1.8rem;
+    background-color: #0ff;
+    top: 50%;
+    left: 50%;
+    transform-origin: left center;
+    transition: all 0.05s ease-in-out;
+}
+
+.hour {
+    width: 30%;
+    background-color: #00ffaa;
+}
+
+.minute {
+    width: 40%;
+    background-color: #0ff;
+    height: 0.4vmin;
+}
+
+.second {
+    width: 45%;
+    background-color: red;
+    height: 0.3vmin;
+}
+
+.day-date {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: red;
+}
+
+.centre-point {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #0ff;
+    z-index: 10;
+}
+
+.second {
+    transform: 0.05s linear;
+}
+
+.hour-line {
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: cyan;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.hour-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Practice Day 3 (beggining of core) */
+.hour-number.special {
+    font-size: 1.8rem;
+    color: #0fa;
+    text-shadow: 0 0 10px #0ff;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hour-number.special:hover {
+    color: transparent;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px red;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+.hour-number.special:hover::before {
+    content: "♥️";
+    color: red;
+    font-size: 2rem;
+    text-shadow: 0 0 10px red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.hour-number.special:hover::after {
+    content: "";
+    visibility: hidden;
+}

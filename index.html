@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Practice Day 2 (beggining of core) -->
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+        <div class="centre-point"></div>
+
+        <!-- hour lines -->
+        <div class="hour-line" style="transform: rotate(0deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(30deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(-60deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(90deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(-120deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(150deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(180deg) translate(0, -160px);"></div>
+        <div class="hour-line" style="transform: rotate(210deg) translate(0, -160px);"></div>
+        <!-- <div class="hour-line special" style="transform: rotate(240deg) translate(0, 135px);"></div> -->
+        <!-- Practice Day 3 (beggining of core) -->
+        <div class="hour-number special" data-number="2"
+            style="transform: rotate(60deg) translate(0, -160px) rotate(-60deg);">2</div>
+        <div class="hour-line" style="transform: rotate(270deg) translate(0, -160px);"></div>
+        <!-- <div class="hour-line special" style="transform: rotate(300deg) translate(0, 135px);"></div> -->
+        <div class="hour-number special" data-number="4"
+            style="transform: rotate(120deg) translate(0, -150px) rotate(-120deg);">4</div>
+        <div class="hour-line" style="transform: rotate(330deg) translate(0, -160px);"></div>
+
+
+    </div>
+
+    <audio id="tickSound" src="tick.mp3" preload="auto"></audio>
+    <div class="digital-time">
+        <p id="time">00:00:00</p>
+    </div>
+
+    <div class="day-date">
+        <p id="day"></p>
+        <p id="date"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
